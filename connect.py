@@ -1,6 +1,9 @@
 import psycopg2
 
-db = psycopg2.connect("dbname=news")
+try:
+    db = psycopg2.connect("dbname=news")
+except psycopg2.Error as e:
+    print ("Unable to connect to the database")
 
 
 def most_accessed_articles():
