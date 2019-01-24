@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import connect
 
 mostaar = connect.most_accessed_articles()
