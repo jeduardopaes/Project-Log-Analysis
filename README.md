@@ -8,9 +8,37 @@ The objective of this projects is to make a code using Python to answer 3 questi
 2. Who are the most popular article authors of all time?
 3. On which days did more than 1% of requests lead to errors?
 
-## To run de code
+## Prerequisites
 
-You should have [python](https://www.python.org/) installed.
+Download VMbox [here](https://www.virtualbox.org/wiki/Downloads) and install it. This may [help](https://www.virtualbox.org/manual/ch02.html) you.
+
+Download VagrantMachine [here](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5acfbfa3_fsnd-virtual-machine/fsnd-virtual-machine.zip).
+
+Change to the directory after you unzip the file in your terminal with ```cd```. Inside, you will find another directory called vagrant. Change directory to the vagrant directory, and use the command ```vagrant up``` to create the machine.
+
+This machine already has:
+  1. postgresql
+  2. python3
+  3. python
+  
+After the machine is done you can access it using the command ```vagrant ssh```.
+  
+Download file to create Database [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
+
+The file inside is called **newsdata.sql**. Put this file into the **vagrant** directory, which is shared with your virtual machine.
+
+To load the data, ```cd``` into the vagrant directory and use the command ```psql -d news -f newsdata.sql```.
+Here's what this command does:
+
+* psql — the PostgreSQL command line program
+* -d news — connect to the database named news which has been set up for you
+* -f newsdata.sql — run the SQL statements in the file newsdata.sql
+
+_Running this command will connect to your installed database server and execute the SQL commands in the downloaded file, creating tables and populating them with data._
+
+
+
+## To run de code
 
 Just run this code on the terminal:
 
